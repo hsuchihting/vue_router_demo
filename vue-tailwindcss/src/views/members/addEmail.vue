@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "home",
+  name: "addEmail",
   setup() {
     return {
       data() {
@@ -10,9 +10,8 @@ export default {
   },
 };
 </script>
-
 <template>
   <div>
-    <h2>home component is working!</h2>
+    <h2>addEmail component is working!</h2>
   </div>
 </template>

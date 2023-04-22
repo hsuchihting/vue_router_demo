@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "home",
+  name: "Members",
   setup() {
     return {
       data() {
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <div>
-    <h2>home component is working!</h2>
+  <div class="bg-yellow-200 p-12">
+    <router-view></router-view>
   </div>
 </template>

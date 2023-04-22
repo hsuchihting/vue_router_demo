@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "home",
+  name: "addMember",
   setup() {
     return {
       data() {
@@ -13,6 +13,6 @@ export default {
 
 <template>
   <div>
-    <h2>home component is working!</h2>
+    <h2>addMember component is working!</h2>
   </div>
 </template>
