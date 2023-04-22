@@ -6,15 +6,15 @@ export default {
       data() {
         return {};
       },
-      methods: {
-        back() {
-          this.$router.push('/members/addMember')
-        },
-        toNextPage() {
-          this.$router.push('/members/addContact');
-        },
-      },
     };
+  },
+  methods: {
+    back() {
+      this.$router.push("/members");
+    },
+    toNextPage() {
+      this.$router.push("/members/addContact");
+    },
   },
 };
 </script>

@@ -6,12 +6,16 @@ export default {
       data() {
         return {};
       },
-      methods: {
-        back() {
-          this.$router.push({ name: "members" });
-        },
-      },
     };
+  },
+  methods: {
+    back() {
+      console.log(this.$router.back());
+      this.$router.back();
+    },
+    login() {
+      alert("登入成功");
+    },
   },
 };
 </script>
@@ -42,10 +46,23 @@ export default {
         </div>
       </div>
 
-      <router-link to="/members/addEmail" class="mt-2 block text-yellow-600 hover:underline">
-        註冊會員 
+      <router-link
+        to="/members/addEmail"
+        class="mt-2 block text-yellow-600 hover:underline"
+      >
+        註冊會員
         <i class="fas fa-chevron-right"></i>
       </router-link>
+
+      <div class="text-left">
+        <button
+          type="button"
+          class="mt-4 px-32 py-3 rounded-md bg-yellow-900 text-white"
+          @click="login()"
+        >
+          登入
+        </button>
+      </div>
     </form>
   </div>
 </template>
