@@ -1,12 +1,8 @@
 <script>
 export default {
   name: "addPersonalInfo",
-  setup() {
-    return {
-      data() {
-        return {};
-      },
-    };
+  data() {
+    return {};
   },
   methods: {
     back() {

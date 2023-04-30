@@ -15,6 +15,7 @@ export default {
     },
     login() {
       alert("登入成功");
+      this.$router.push("/");
     },
   },
 };

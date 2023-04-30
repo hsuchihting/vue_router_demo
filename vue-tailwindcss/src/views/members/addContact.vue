@@ -1,12 +1,8 @@
 <script>
 export default {
   name: "addContact",
-  setup() {
-    return {
-      data() {
-        return {};
-      },
-    };
+  data() {
+    return {};
   },
   methods: {
     back() {

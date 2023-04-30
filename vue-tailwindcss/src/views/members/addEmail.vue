@@ -1,12 +1,26 @@
 <script>
 export default {
   name: "addEmail",
-  setup() {
+  data() {
     return {
-      data() {
-        return {};
-      },
+      email: "",
+      isAgree: false,
+      isObeyRules: false,
     };
+  },
+  mounted() {
+    const email = "defaultName@email.com";
+    this.email = email;
+    this.isAgree = !!this.email;
+    this.isObeyRules = !!this.email;
+  },
+  beforeRouteLeave(to, from, next) {
+    if (this.isAgree && this.isObeyRules) {
+      next();
+    } else {
+      alert("請同意條款");
+      next(false);
+    }
   },
   methods: {
     back() {
@@ -31,23 +45,20 @@ export default {
           <input
             type="text"
             class="w-full p-4 border border-yellow-600 outline-none rounded-lg"
+            v-model="email"
           />
         </div>
       </div>
 
       <div class="w-full flex mt-2">
-        <input type="checkbox" />
-        <p class="text-yellow-700 ml-4">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
-          ea iusto fugit magnam mollitia sunt tempore aut soluta cumque itaque!
-        </p>
+        <input type="checkbox" v-model="isAgree" />
+        <p class="text-yellow-700 ml-4">agree to the terms and conditions</p>
       </div>
 
       <div class="w-full flex mt-2">
-        <input type="checkbox" />
+        <input type="checkbox" v-model="isObeyRules" />
         <p class="text-yellow-700 ml-4">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
-          ea iusto fugit magnam mollitia sunt tempore aut soluta cumque itaque!
+          I will obey the rules when I use this website
         </p>
       </div>
 
