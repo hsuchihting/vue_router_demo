@@ -15,12 +15,9 @@ export default {
     this.isObeyRules = !!this.email;
   },
   beforeRouteLeave(to, from, next) {
-    if (this.isAgree && this.isObeyRules) {
-      next();
-    } else {
-      alert("請同意條款");
-      next(false);
-    }
+    console.log("to: ", to);
+    console.log("from: ", from);
+    console.log("next: ", next);
   },
   methods: {
     back() {
